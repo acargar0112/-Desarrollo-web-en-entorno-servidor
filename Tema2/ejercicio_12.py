@@ -1,0 +1,1 @@
+print("Los comentarios estan en el ejercicio 7 y 4")
