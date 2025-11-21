@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block url %}<link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">{% endblock %}
+{% block titulo %}<h1>Catálogo</h1>{% endblock %}
+
+{% block contenido %}
+
+<ul>
+    <li><a href="{{ url_for('videojuegos.inicio_videojuegos')}}">Videojuegos</a></li>
+    <li><a href="{{ url_for('electrodomesticos.inicio_electrodomesticos')}}">Electrodomésticos</a></li>
+</ul>
+
+{% endblock %}
+{% block back %}{%endblock%}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block url %}<link rel="stylesheet" href="{{ url_for('static', filename='css/index_videojuegos.css') }}">{% endblock %}
+
+{% block titulo %}<h1>Inicio</h1>{% endblock %}
+
+{% block contenido %}
+
+<ul>
+    {% for producto in productos %}
+    <li><a href="{{ url_for('videojuegos.detalle', id=producto.id) }}">{{producto.nombre}}</a></li>
+    <img src="{{ url_for('static', filename='img/' + producto.img) }}" alt="{{producto.nombre}}" width="20%" height="50%">
+    {% endfor %}
+</ul>
+
+{% endblock %}

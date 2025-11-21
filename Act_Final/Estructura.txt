@@ -1,0 +1,16 @@
+SUJETA A CAMBIOS
+
+
+mi_catalogo
+	- app.py
+	- templates
+		- base.html
+			- Catalogo.html
+				- index_videojuegos.html
+					- detalle.html
+				- index_electrodomésticos.html
+					-  detalle.html
+			
+	- static
+		-css
+			-archivo.css

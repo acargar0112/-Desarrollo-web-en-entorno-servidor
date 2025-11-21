@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block url %}<link rel="stylesheet" href="{{ url_for('static', filename='css/detalle_videojuegos.css') }}">{% endblock %}
+{% block titulo %}<h1>{{producto.nombre}}</h1>{% endblock %}
+
+{% block contenido %}
+<div class="contenedor">
+    <img src="{{url_for('static', filename='img/' + producto.img)}}" alt="{{producto.nombre}}" width="50%" height="50%">
+    <div class="texto">
+        <p>{{producto.descripcion}}</p>
+
+        <h2>Requisitos Mínimos</h2>
+        <ul>
+            <li>{{producto.CPU}}</li>
+            <li>{{producto.GPU}}</li>
+            <li>{{producto.RAM}}</li>
+            <li>{{producto.Almacenamiento}}</li>
+            <li>{{producto.Sistema}}</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
+
+{% block back %}<a href="{{url_for('videojuegos.inicio_videojuegos')}}">Indice</a>{%endblock%}
